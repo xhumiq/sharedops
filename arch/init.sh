@@ -22,7 +22,7 @@ sudo pacman -S --needed --noconfirm dmenu perl-json-xs perl-anyevent-i3 gtk-engi
 sudo pacman -S --needed --noconfirm nmap p7zip codeblocks dust exa tmux tmuxp qemu-full
 sudo pacman -S --needed --noconfirm perl-async-interrupt perl-ev perl-guard perl-json perl-json-xs perl-net-ssleay
 sudo pacman -S --needed --noconfirm bridge-utils virt-manager vde2 ebtables dnsmasq
-sudo pacman -S --needed --noconfirm noto-fonts ttf-ubuntu-font-family
+sudo pacman -S --needed --noconfirm noto-fonts ttf-ubuntu-font-family lxappearance
 sudo pacman -S --needed --noconfirm ttf-droid ttf-terminus-nerd ttf-font-awesome ttf-dejavu ttf-freefont
 sudo pacman -S --needed --noconfirm adobe-source-han-sans-cn-fonts adobe-source-han-sans-tw-fonts
 sudo pacman -S --needed --noconfirm ttf-firacode-nerd ttf-iosevka-nerd rtkit
@@ -71,6 +71,10 @@ if [ ! -f "/home/mchu/.jabba/jabba.sh" ]; then
 
   [ -s "/home/mchu/.jabba/jabba.sh" ] && source "/home/mchu/.jabba/jabba.sh"
   jabba install zulu@1.8
+fi
+
+if [ ! -d $HOME/.oh-my-zsh ]; then
+  git clone https://github.com/robbyrussell/oh-my-zsh $HOME/.oh-my-zsh
 fi
 
 pip3 install importlib_resources j2cli s4cmd jq yq linode-cli
