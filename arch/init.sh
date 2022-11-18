@@ -2,12 +2,15 @@
 set -e
 
 sudo pacman -Syuuu
-# reflector --verbose --latest 200 --number 5 --sort rate --save /etc/pacman.d/mirrorlist
+
+sudo pacman -S --needed pciutils lshw pacman-contrib reflector ranger polkit udiskie udisks2 gvfs-smb vim exfat-utils
+
+reflector --latest 200 --number 5 --sort rate --save /etc/pacman.d/mirrorlist &
 #--noconfirm -- Kedenlive
-sudo pacman -S --needed i3-gaps i3lock i3status gvfs-smb alsa-utils alsa-card-profiles 
-sudo pacman -S --needed pipewire-pulse pulsemixer pipewire-x11-bell exfat-utils
-sudo pacman -S --needed pcmanfm udiskie base-devel zip unzip polkit vim
-sudo pacman -S --needed openssh picom polybar chromium go firefox exfat-utils
+sudo pacman -S --needed i3-gaps i3lock i3status alsa-utils alsa-card-profiles 
+sudo pacman -S --needed pipewire-pulse pulsemixer pipewire-x11-bell
+sudo pacman -S --needed pcmanfm udiskie base-devel zip unzip
+sudo pacman -S --needed openssh picom polybar chromium go firefox
 sudo pacman -S --needed adobe-source-han-sans-cn-fonts adobe-source-han-sans-tw-fonts
 sudo pacman -S --needed bpytop ttf-firacode-nerd ttf-iosevka-nerd rtkit
 sudo pacman -S --needed dnsutils tcpdump feh rustup cargo ripgrep lxsession
@@ -15,12 +18,12 @@ sudo pacman -S --needed bat exa fd procs hexyl sd iftop nload nmon bmon iptraf-n
 sudo pacman -S --needed opendesktop-fonts yq broot sd traceroute pavucontrol
 sudo pacman -S --needed vlc zstd python pygmentize ttf-hack-nerd xorg-xrandr
 sudo pacman -S --needed jq bash-completion keychain mlocate wget curl words lsof which
-sudo pacman -S --needed pciutils lshw pacman-contrib reflector noto-fonts ttf-ubuntu-font-family
+sudo pacman -S --needed noto-fonts ttf-ubuntu-font-family
 sudo pacman -S --needed ttf-droid ttf-terminus-nerd ttf-font-awesome ttf-dejavu ttf-freefont
-sudo pacman -S --needed rxvt-unicode ranger rofi urxvt-perls arandr udisks2
+sudo pacman -S --needed rxvt-unicode rofi urxvt-perls arandr udisks2
 sudo pacman -S --needed conky atool highlight elinks mediainfo w3m ffmpegthumbnailer mupdf
 sudo pacman -S --needed dmenu perl-json-xs perl-anyevent-i3 gtk-engines docker docker-compose
-sudo pacman -S --needed nmap p7zip ranger rsync codeblocks dust exa tmux tmuxp
+sudo pacman -S --needed nmap p7zip rsync codeblocks dust exa tmux tmuxp
 sudo pacman -S --needed perl-async-interrupt perl-ev perl-guard perl-json perl-json-xs perl-net-ssleay
 sudo pacman -S --needed bridge-utils virt-manager qemu vde2 ebtables dnsmasq
 
