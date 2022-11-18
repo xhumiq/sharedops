@@ -74,3 +74,5 @@ if [ ! -f "/home/mchu/.jabba/jabba.sh" ]; then
 fi
 
 pip3 install importlib_resources j2cli s4cmd jq yq linode-cli
+
+sudo chsh -s /usr/bin/zsh mchu
