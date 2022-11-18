@@ -25,7 +25,6 @@ export RC_SCRIPTPATH="$( cd "$(dirname "$0")" ; pwd -P )"
 export CHROME_BIN_PATH="/usr/bin/chromium"
 export CURRENT_PROJ=""
 export DOCKER_COMPOSE_PROJ="LOC"
-export BROWSER_DATA=$HOME/.local/.ch
 
 # %{$fg[red]%}%m%{$reset_color%}
 
