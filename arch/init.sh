@@ -3,29 +3,29 @@ set -e
 
 sudo pacman -Syuuu
 
-sudo pacman -S --needed pciutils lshw pacman-contrib reflector ranger polkit udiskie udisks2 gvfs-smb vim exfat-utils
+sudo pacman -S --needed --noconfirm pciutils lshw pacman-contrib rsync reflector ranger polkit udiskie udisks2 gvfs-smb vim exfat-utils
 
-reflector --latest 200 --number 5 --sort rate --save /etc/pacman.d/mirrorlist &
+[[ ! pgrep -x reflector ]] && reflector --latest 200 --number 5 --sort rate --save /etc/pacman.d/mirrorlist  > /dev/null &
 #--noconfirm -- Kedenlive
-sudo pacman -S --needed i3-gaps i3lock i3status alsa-utils alsa-card-profiles 
-sudo pacman -S --needed pipewire-pulse pulsemixer pipewire-x11-bell
-sudo pacman -S --needed pcmanfm udiskie base-devel zip unzip
-sudo pacman -S --needed openssh picom polybar chromium go firefox
-sudo pacman -S --needed adobe-source-han-sans-cn-fonts adobe-source-han-sans-tw-fonts
-sudo pacman -S --needed bpytop ttf-firacode-nerd ttf-iosevka-nerd rtkit
-sudo pacman -S --needed dnsutils tcpdump feh rustup cargo ripgrep lxsession
-sudo pacman -S --needed bat exa fd procs hexyl sd iftop nload nmon bmon iptraf-ng alacritty
-sudo pacman -S --needed opendesktop-fonts yq broot sd traceroute pavucontrol
-sudo pacman -S --needed vlc zstd python pygmentize ttf-hack-nerd xorg-xrandr
-sudo pacman -S --needed jq bash-completion keychain mlocate wget curl words lsof which
-sudo pacman -S --needed noto-fonts ttf-ubuntu-font-family
-sudo pacman -S --needed ttf-droid ttf-terminus-nerd ttf-font-awesome ttf-dejavu ttf-freefont
-sudo pacman -S --needed rxvt-unicode rofi urxvt-perls arandr udisks2
-sudo pacman -S --needed conky atool highlight elinks mediainfo w3m ffmpegthumbnailer mupdf
-sudo pacman -S --needed dmenu perl-json-xs perl-anyevent-i3 gtk-engines docker docker-compose
-sudo pacman -S --needed nmap p7zip rsync codeblocks dust exa tmux tmuxp
-sudo pacman -S --needed perl-async-interrupt perl-ev perl-guard perl-json perl-json-xs perl-net-ssleay
-sudo pacman -S --needed bridge-utils virt-manager qemu vde2 ebtables dnsmasq
+sudo pacman -S --needed --noconfirm i3-gaps i3lock i3status alsa-utils alsa-card-profiles 
+sudo pacman -S --needed --noconfirm pipewire-pulse pulsemixer pipewire-x11-bell python
+sudo pacman -S --needed --noconfirm pcmanfm udiskie base-devel zip unzip bpytop
+sudo pacman -S --needed --noconfirm openssh picom polybar chromium go firefox alacritty
+sudo pacman -S --needed --noconfirm dnsutils tcpdump feh rustup cargo ripgrep lxsession
+sudo pacman -S --needed --noconfirm bat exa fd procs hexyl sd iftop nload nmon bmon iptraf-ng 
+sudo pacman -S --needed --noconfirm opendesktop-fonts yq broot sd traceroute pavucontrol
+sudo pacman -S --needed --noconfirm vlc zstd python-pip pygmentize ttf-hack-nerd xorg-xrandr
+sudo pacman -S --needed --noconfirm jq bash-completion keychain mlocate wget curl words lsof which
+sudo pacman -S --needed --noconfirm rxvt-unicode rofi urxvt-perls arandr keepassxc
+sudo pacman -S --needed --noconfirm conky atool highlight elinks mediainfo w3m ffmpegthumbnailer mupdf
+sudo pacman -S --needed --noconfirm dmenu perl-json-xs perl-anyevent-i3 gtk-engines docker docker-compose
+sudo pacman -S --needed --noconfirm nmap p7zip codeblocks dust exa tmux tmuxp qemu-full
+sudo pacman -S --needed --noconfirm perl-async-interrupt perl-ev perl-guard perl-json perl-json-xs perl-net-ssleay
+sudo pacman -S --needed --noconfirm bridge-utils virt-manager vde2 ebtables dnsmasq
+sudo pacman -S --needed --noconfirm noto-fonts ttf-ubuntu-font-family
+sudo pacman -S --needed --noconfirm ttf-droid ttf-terminus-nerd ttf-font-awesome ttf-dejavu ttf-freefont
+sudo pacman -S --needed --noconfirm adobe-source-han-sans-cn-fonts adobe-source-han-sans-tw-fonts
+sudo pacman -S --needed --noconfirm ttf-firacode-nerd ttf-iosevka-nerd rtkit
 
 sudo usermod -aG wheel,audio,video,storage $USER
 
