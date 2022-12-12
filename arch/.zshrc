@@ -4,6 +4,8 @@
 # Path to your oh-my-zsh installation.
 export ZSH="${HOME}/.oh-my-zsh"
 
+ZSH_THEME="smt"
+
 plugins=(
   git
   macos
@@ -29,7 +31,7 @@ export DOCKER_COMPOSE_PROJ="LOC"
 # %{$fg[red]%}%m%{$reset_color%}
 
 PROMPT='
-%{$fg[cyan]%}%~%{$reset_color%} %{$fg[gray]%}%t %{$reset_color%}$(git_prompt_short_sha)$(git_prompt_info) [%{$fg[red]%}${CURRENT_PROJ}%{$reset_color%}_${KUBECONFIG:t:r}/${KUBE_NAMESPACE}_${BACK_END_ENV}] $(prompt_docker_machine_name)
+%{$fg[blue]%}KEF %{$fg[cyan]%}%~ %{$reset_color%}$(git_prompt_short_sha)$(git_prompt_info)
 %{$fg[red]%}%!%{$reset_color%} $(prompt_char) : '
 
 function prompt_char() {
@@ -43,7 +45,7 @@ function prompt_docker_machine_name(){
 
 pathadd() {
   newelement=${1%/}
-  if [ -d "$1"] && ! echo $PATH | grep -E -q "(^|:)$newelement($|:)" ; then
+  if [ -d "$1" ] && ! echo $PATH | grep -E -q "(^|:)$newelement($|:)" ; then
     if [ "$2" = "after" ] ; then
       PATH="$PATH:$newelement"
     else
@@ -119,6 +121,7 @@ dm_use(){eval $(docker-machine env $1)}
 pathadd "$HOME/.rvm/bin" after
 pathadd "$HOME/Library/Python/2.7/bin" after
 pathadd "/var/lib/snapd/snap/bin" after
+pathadd "/opt/cuda/bin" after
 
 export PATH
 
@@ -212,7 +215,7 @@ func kcsvc!(){
 }
 
 ovpn(){
-	sudo openvpn ${CONFIG_REPO}/configs/.ovpn/$1.ovpn
+	sudo openvpn-2.5.5 ${CONFIG_REPO}/configs/.ovpn/$1.ovpn
 }
 
 kc(){

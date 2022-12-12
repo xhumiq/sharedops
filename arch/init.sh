@@ -96,6 +96,24 @@ if [ ! -d $HOME/.oh-my-zsh ]; then
   git clone https://github.com/robbyrussell/oh-my-zsh $HOME/.oh-my-zsh
 fi
 
-# pip3 install importlib_resources j2cli s4cmd jq yq linode-cli
+pip3 install importlib_resources j2cli s4cmd jq yq linode-cli
+
+# https://community.openvpn.net/openvpn/wiki/BuildingUsingGenericBuildsystem
+
+wget https://www.openssl.org/source/openssl-1.1.1s.tar.gz -o /tmp/openssl-1.1.1s.tar.gz
+(
+  cd /tmp/
+  tar -xzvf /tmp/openssl-1.1.1s.tar.gz
+)
+
+wget https://github.com/OpenVPN/openvpn/archive/refs/tags/v2.5.5.tar.gz -o /tmp/openvpn-v2.5.5.tar.gz
+(
+  cd /tmp/
+  tar -xzvf /tmp/openvpn-v2.5.5.tar.gz
+  cd openvpn-v2.5.5
+  ./configure OPENSSL_SSL_LIBS="-L/usr/openssl-1.0.1h/ -lssl" OPENSSL_SSL_CFLAGS="-I/usr/openssl-1.0.1h/include/" OPENSSL_CRYPTO_LIBS="-L/usr/openssl-1.0.1h/ -lcrypto" OPENSSL_CRYPTO_CFLAGS="-I/usr/openssl-1.0.1h/include/"
+  CFLAGS="-I/usr/local/ssl/include -Wl,-rpath=/usr/local/ssl/lib -L/usr/local/ssl/lib"
+  make -j 4 && sudo make install
+)
 
 # sudo chsh -s /usr/bin/zsh mchu
