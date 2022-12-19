@@ -27,6 +27,11 @@
 
 6. In the __Videos__ folder - select a file to download and click on the __DOWNLOAD__ button.
 
+    ### To Download file
+
+    1. Select File
+    2. Click Download
+
 ![Home Page](./images/IslanderVideos.png)
 
 7. Save File to Local Drive
