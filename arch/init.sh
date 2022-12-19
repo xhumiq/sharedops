@@ -11,7 +11,7 @@ sudo pacman -S --needed --noconfirm i3-gaps i3lock i3status alsa-utils alsa-card
 sudo pacman -S --needed --noconfirm pipewire-pulse pulsemixer pipewire-x11-bell python gettext rustup
 sudo pacman -S --needed --noconfirm pcmanfm udiskie base-devel zip unzip bpytop rtkit element-desktop
 sudo pacman -S --needed --noconfirm openssh picom polybar chromium go firefox alacritty openvpn
-sudo pacman -S --needed --noconfirm dnsutils tcpdump feh rustup cargo ripgrep lxsession cuda
+sudo pacman -S --needed --noconfirm dnsutils tcpdump feh rustup cargo ripgrep lxsession cuda age
 sudo pacman -S --needed --noconfirm bat exa fd procs hexyl sd iftop nload nmon bmon iptraf-ng 
 sudo pacman -S --needed --noconfirm opendesktop-fonts yq broot traceroute pavucontrol flameshot
 sudo pacman -S --needed --noconfirm vlc zstd python-pip pygmentize ttf-hack-nerd xorg-xrandr
@@ -53,6 +53,8 @@ ysy() {
   yay -S --overwrite --redownloadall --removemake --rebuildall --noeditmenu --nodiffmenu --cleanafter --answerclean a --answerupgrade a $@
 }
 
+[ ! -f /usr/bin/dexios ] && sudo cargo install dexios && sudo ln -s /home/mchu/.cargo/bin/dexios /usr/bin/
+[ ! -f /usr/bin/rage ] && sudo cargo install rage && sudo ln -s /home/mchu/.cargo/bin/rage /usr/bin/
 [ ! -f /usr/bin/code ] && ysy --needed aur/visual-studio-code-bin
 [ ! -f /usr/bin/nordvpn ] && ysy --needed aur/nordvpn-bin
 [ ! -f /usr/bin/teamviewer ] && ysy --needed aur/teamviewer
@@ -97,23 +99,5 @@ if [ ! -d $HOME/.oh-my-zsh ]; then
 fi
 
 pip3 install importlib_resources j2cli s4cmd jq yq linode-cli
-
-# https://community.openvpn.net/openvpn/wiki/BuildingUsingGenericBuildsystem
-
-wget https://www.openssl.org/source/openssl-1.1.1s.tar.gz -o /tmp/openssl-1.1.1s.tar.gz
-(
-  cd /tmp/
-  tar -xzvf /tmp/openssl-1.1.1s.tar.gz
-)
-
-wget https://github.com/OpenVPN/openvpn/archive/refs/tags/v2.5.5.tar.gz -o /tmp/openvpn-v2.5.5.tar.gz
-(
-  cd /tmp/
-  tar -xzvf /tmp/openvpn-v2.5.5.tar.gz
-  cd openvpn-v2.5.5
-  ./configure OPENSSL_SSL_LIBS="-L/usr/openssl-1.0.1h/ -lssl" OPENSSL_SSL_CFLAGS="-I/usr/openssl-1.0.1h/include/" OPENSSL_CRYPTO_LIBS="-L/usr/openssl-1.0.1h/ -lcrypto" OPENSSL_CRYPTO_CFLAGS="-I/usr/openssl-1.0.1h/include/"
-  CFLAGS="-I/usr/local/ssl/include -Wl,-rpath=/usr/local/ssl/lib -L/usr/local/ssl/lib"
-  make -j 4 && sudo make install
-)
 
 # sudo chsh -s /usr/bin/zsh mchu
