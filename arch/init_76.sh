@@ -1,3 +1,6 @@
+#!/usr/bin/env bash
+set -e
+
 sudo pacman -Syuuu
 
 sudo pacman -S --needed --noconfirm community/pop-icon-theme community/pop-gtk-theme

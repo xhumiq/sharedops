@@ -21,7 +21,8 @@ sudo pacman -S --needed --noconfirm conky atool highlight elinks mediainfo w3m f
 sudo pacman -S --needed --noconfirm dmenu perl-json-xs perl-anyevent-i3 gtk-engines aardvark-dns
 sudo pacman -S --needed --noconfirm nmap p7zip dust exa tmux tmuxp qemu-full remmina freerdp kdiskmark
 sudo pacman -S --needed --noconfirm perl-async-interrupt perl-ev perl-guard perl-json perl-json-xs perl-net-ssleay
-sudo pacman -S --needed --noconfirm bridge-utils virt-manager vde2 ebtables dnsmasq thunderbird
+sudo pacman -S --needed ebtables
+sudo pacman -S --needed --noconfirm bridge-utils virt-manager vde2 dnsmasq thunderbird
 sudo pacman -S --needed --noconfirm yubico-pam yubikey-personalization sysstat ps_mem gtop nmon bpytop
 sudo pacman -S --needed --noconfirm dnsutils tcpdump wireshark-qt python-pdftotext xbindkeys strace
 sudo pacman -S --needed --noconfirm noto-fonts ttf-ubuntu-font-family lxappearance signal-desktop borg
