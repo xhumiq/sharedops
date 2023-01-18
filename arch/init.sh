@@ -16,17 +16,17 @@ sudo pacman -S --needed --noconfirm bat exa fd procs hexyl sd iftop nload nmon b
 sudo pacman -S --needed --noconfirm opendesktop-fonts yq broot traceroute pavucontrol flameshot
 sudo pacman -S --needed --noconfirm vlc zstd python-pip pygmentize ttf-hack-nerd xorg-xrandr
 sudo pacman -S --needed --noconfirm jq bash-completion keychain mlocate wget curl words lsof which
-sudo pacman -S --needed --noconfirm rxvt-unicode rofi urxvt-perls arandr keepassxc docker docker-compose
+sudo pacman -S --needed --noconfirm rxvt-unicode rofi urxvt-perls arandr keepassxc podman netavark
 sudo pacman -S --needed --noconfirm conky atool highlight elinks mediainfo w3m ffmpegthumbnailer mupdf
-sudo pacman -S --needed --noconfirm dmenu perl-json-xs perl-anyevent-i3 gtk-engines docker-machine
-sudo pacman -S --needed --noconfirm nmap p7zip dust exa tmux tmuxp qemu-full remmina freerdp
+sudo pacman -S --needed --noconfirm dmenu perl-json-xs perl-anyevent-i3 gtk-engines aardvark-dns
+sudo pacman -S --needed --noconfirm nmap p7zip dust exa tmux tmuxp qemu-full remmina freerdp kdiskmark
 sudo pacman -S --needed --noconfirm perl-async-interrupt perl-ev perl-guard perl-json perl-json-xs perl-net-ssleay
 sudo pacman -S --needed --noconfirm bridge-utils virt-manager vde2 ebtables dnsmasq thunderbird
 sudo pacman -S --needed --noconfirm yubico-pam yubikey-personalization sysstat ps_mem gtop nmon bpytop
 sudo pacman -S --needed --noconfirm dnsutils tcpdump wireshark-qt python-pdftotext xbindkeys strace
-sudo pacman -S --needed --noconfirm noto-fonts ttf-ubuntu-font-family lxappearance signal-desktop
-sudo pacman -S --needed --noconfirm adobe-source-han-sans-cn-fonts adobe-source-han-sans-tw-fonts
-sudo pacman -S --needed --noconfirm ttf-firacode-nerd ttf-iosevka-nerd ttf-dejavu ttf-freefont
+sudo pacman -S --needed --noconfirm noto-fonts ttf-ubuntu-font-family lxappearance signal-desktop borg
+sudo pacman -S --needed --noconfirm adobe-source-han-sans-cn-fonts adobe-source-han-sans-tw-fonts restic
+sudo pacman -S --needed --noconfirm ttf-firacode-nerd ttf-iosevka-nerd ttf-dejavu ttf-freefont gparted
 
 sudo usermod -aG wheel,audio,video,storage,docker $USER
 
@@ -68,6 +68,7 @@ ysy() {
 [ ! -d /usr/share/icons/capitaine-cursors ] && ysy --needed community/capitaine-cursors
 [ ! -d /usr/share/themes/Mint-X ] && ysy --needed aur/mint-themes
 [ ! -d /usr/share/icons/breeze ] && ysy --needed --noconfirm aur/plasma5-themes-breath
+[ ! -d /usr/bin/bfg ] && ysy --needed --noconfirm aur/bfg
 
 if [ ! -d "$HOME/.nvm" ]; then
 	  curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.2/install.sh | bash
