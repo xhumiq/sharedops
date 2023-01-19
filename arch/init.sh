@@ -28,6 +28,7 @@ sudo pacman -S --needed --noconfirm dnsutils tcpdump wireshark-qt python-pdftote
 sudo pacman -S --needed --noconfirm noto-fonts ttf-ubuntu-font-family lxappearance signal-desktop borg
 sudo pacman -S --needed --noconfirm adobe-source-han-sans-cn-fonts adobe-source-han-sans-tw-fonts restic
 sudo pacman -S --needed --noconfirm ttf-firacode-nerd ttf-iosevka-nerd ttf-dejavu ttf-freefont gparted
+sudo pacman -S --needed --noconfirm pcsc-tools
 
 sudo usermod -aG wheel,audio,video,storage,docker $USER
 
