@@ -22,12 +22,12 @@
 
 ## 2. Subscribe to Podcast
 
-* ### A. Copy podcast url from Messages or Skype
+* ### A. Press and ___Hold___ the url link from Messages or Skype
 
 ![Go to App Store](images/Messages01.png)
 ![Go to App Store](images/Skype03.png)
 
-* ### B. Press and ___Hold___ the url link
+* ### B. Copy podcast url from Messages or Skype
 
 ![Go to App Store](images/Messages02.png)
 ![Go to App Store](images/Skype01.png)
