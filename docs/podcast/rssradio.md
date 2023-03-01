@@ -1,6 +1,6 @@
 # Podcasts for the IPhone -- RSSRadio
 
-## 1. Subscribe to Podcast
+## 1. Copy Podcast URL
 
 * ### A. Press and ___Hold___ the url link from Messages or Skype
 
