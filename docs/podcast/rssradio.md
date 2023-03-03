@@ -63,7 +63,7 @@
 * ### L. Optional - Help and Tips
 ![Go to App Store](images/rssradio/RssRadio12.png)
 
-## 2. Download and Watch Videos
+## 3. Download and Watch Videos
 
 * ### A. Select Podcast
 ![Go to App Store](images/rssradio/RssRadio13.png)
