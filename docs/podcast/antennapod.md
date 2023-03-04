@@ -1,5 +1,16 @@
 # Podcasts for the Android phones -- Antenna Pod
 
+3. []()
+    * A. []()
+    * B. []()
+    * C. []()
+    * D. []()
+    * E. []()
+    * F. []()
+    * G. []()
+    * H. []()
+    * I. []()
+
 ## 1. Copy Podcast URL
 
 * ### A. Press and ___Hold___ the url link from Skype
