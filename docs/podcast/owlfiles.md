@@ -6,7 +6,7 @@
 2. [Install Owlfiles from the App Store](#2-install-owlfiles-from-the-app-store)
     * A. [Go to the App Store](#a-go-to-the-app-store)
     * B. [Select Owlfiles in the results drop down](#b-select-owlfiles-in-the-results-drop-down)
-    * C. [Click the Download Button](#c-click-the-download-button)
+    * C. [Click the GET Button](#c-click-the-get-button)
 3. [Add Connection](#3-add-connection)
     * A. [Launch Owlfiles App](#a-launch-owlfiles-app)
     * B. [Select Default Options](#b-select-default-options)
@@ -18,7 +18,7 @@
     * B. [Select WebDav Folder](#b-select-webdav-folder)
     * C. [Change View Mode - Details](#c-change-view-mode---details)
 5. [Download and Watch Videos](#5-download-and-watch-videos)
-    * A. [Select Connection](#a-select-connection)
+    * A. [Select the File you want to download](#a-select-the-file-you-want-to-download)
     * B. [Play File and Exit](#b-play-file-and-exit)
 6. [Playback Speed](#6-playback-speed)
     * A. [Click on Player Setting Icon](#a-click-on-player-setting-icon)
@@ -47,7 +47,7 @@
 ![Go to App Store](images/rssradio/AppStore02.png)
 ![Go to App Store](images/owlfiles/MD-AppStore-Search.png)
 
-* ### C. Click the Download Button
+* ### C. Click the GET Button
 ![Go to App Store](images/owlfiles/MD-AppStore-Get.png)
 ![Go to App Store](images/owlfiles/MD-AppStore-Install.png)
 ![Go to App Store](images/owlfiles/MD-AppStore-Install-Complete.png)
