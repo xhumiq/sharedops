@@ -93,7 +93,7 @@
 * ### A. Select Connection
 ![Go to App Store](images/owlfiles/MD-Owlfiles-WebDav-FileList.png)
 
-* ### B. Play File
+* ### B. Play File and Exit
 ![Go to App Store](images/owlfiles/MD-Owlfiles-Player-Exit.png)
 
 ## 6. Playback Speed
