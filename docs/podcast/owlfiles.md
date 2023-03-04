@@ -72,6 +72,7 @@
 ![Go to App Store](images/owlfiles/MD-Owlfiles-FillForm.png)
 
 * ### E. Enter WebDav Credentials
+![Go to App Store](images/owlfiles/MD-Owlfiles-Hostname.png)
 ![Go to App Store](images/owlfiles/MD-Owlfiles-Login.png)
 
 ## 4. Select WebDav Connection
