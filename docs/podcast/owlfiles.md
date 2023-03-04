@@ -19,11 +19,11 @@
     * C. [Change View Mode - Details](#c-change-view-mode---details)
 5. [Download and Watch Videos](#5-download-and-watch-videos)
     * A. [Select Connection](#a-select-connection)
-    * B. [Play File](#b-play-file)
+    * B. [Play File and Exit](#b-play-file-and-exit)
 6. [Playback Speed](#6-playback-speed)
     * A. [Click on Player Setting Icon](#a-click-on-player-setting-icon)
     * B. [Select Payback Speed](#b-select-payback-speed)
- 
+
 ## 1. Copy Webdav URL
 
 * ### A. Press and ___Hold___ the url link from Messages or Skype
@@ -103,4 +103,3 @@
 
 * ### B. Select Payback Speed
 ![Go to App Store](images/owlfiles/MD-Owlfiles-Player-PlaybackSpeed.png)
-
