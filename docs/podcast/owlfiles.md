@@ -90,7 +90,7 @@
 
 ## 5. Download and Watch Videos
 
-* ### A. Select Connection
+* ### A. Select the file you want to download
 ![Go to App Store](images/owlfiles/MD-Owlfiles-WebDav-FileList.png)
 
 * ### B. Play File and Exit
