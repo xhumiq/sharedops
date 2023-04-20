@@ -1,0 +1,31 @@
+! ~/.Xresources
+#define mybg #222222
+#define myfg #cccccc
+#define myfont Inconsolata
+#define myfontsize 7
+#define mypadding 20
+
+rofi.bg: mybg
+rofi.fg: myfg
+rofi.hlfg: mybg
+rofi.hlbg: myfg
+rofi.padding: mypadding
+rofi.font: myfont myfontsize
+
+URxvt*background: mybg
+URxvt*foreground: myfg
+URxvt*highlightColor: myfg
+URxvt*highlightTextColor: mybg
+URxvt*cursorColor: myfg
+URxvt*cursorColor2: mybg
+URxvt*font: xft:myfont:medium:size=myfontsize 
+URxvt*boldFont: xft:myfont:size=myfontsize 
+URxvt*italicFont: xft:myfont:italic:size=myfontsize 
+URxvt*boldItalicFont: xft:myfont:bold:italic:size=myfontsize 
+URxvt*internalBorder: mypadding
+
+xterm*faceName: myfont:style=Medium:size=myfontsize
+xterm*background: mybg
+xterm*foreground: myfg
+
+Xcursor.size: 32

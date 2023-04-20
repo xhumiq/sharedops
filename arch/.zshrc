@@ -121,7 +121,6 @@ dm_use(){eval $(docker-machine env $1)}
 pathadd "$HOME/.rvm/bin" after
 pathadd "$HOME/Library/Python/2.7/bin" after
 pathadd "/var/lib/snapd/snap/bin" after
-pathadd "/opt/cuda/bin" after
 
 export PATH
 
@@ -146,6 +145,13 @@ diffcfg(){
 
 bkdiff(){
   code -d /run/media/mchu/C055-6D54/config/current/$1 $HOME/$1
+}
+
+rundns(){
+	(
+		cd /usr/lib/coredns
+		/usr/lib/coredns/rundns
+	)
 }
 
 [ -s "${HOME}/.jabba/jabba.sh" ] && source "${HOME}/.jabba/jabba.sh"
@@ -189,6 +195,15 @@ func qssh(){
 	[[ ! -z "$1" ]] && fcfg="$HOME/.ssh/$1/config"
 	shift
 	code $fcfg $@
+}
+
+func qhosts(){
+	fcfg=/usr/lib/coredns
+	code $fcfg/$1
+}
+
+func qaws(){
+	code /home/mchu/.aws/credentials
 }
 
 func kc_remove_app(){
