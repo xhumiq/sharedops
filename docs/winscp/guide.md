@@ -3,7 +3,7 @@
 > ### Direct Link to Download Install File:
 > https://winscp.net/download/WinSCP-5.21.8-Setup.exe
 
-> ### Official Instructions of Installing Winscp
+> ### Official Instructions for Installing Winscp
 > https://winscp.net/eng/docs/installation
 
 ## Download and Install Winscp
