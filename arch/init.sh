@@ -28,7 +28,7 @@ sudo pacman -S --needed --noconfirm wireshark-qt python-pdftotext xbindkeys stra
 sudo pacman -S --needed --noconfirm noto-fonts ttf-ubuntu-font-family lxappearance signal-desktop borg
 sudo pacman -S --needed --noconfirm adobe-source-han-sans-cn-fonts adobe-source-han-sans-tw-fonts restic
 sudo pacman -S --needed --noconfirm ttf-firacode-nerd ttf-iosevka-nerd ttf-dejavu ttf-freefont gparted
-sudo pacman -S --needed --noconfirm pcsc-tools
+sudo pacman -S --needed --noconfirm pcsc-tools dog miniserve procs ouch bottom dua-cli mdcat helix
 
 sudo usermod -aG wheel,audio,video,storage,docker $USER
 
@@ -55,8 +55,11 @@ ysy() {
   yay -S --overwrite --redownloadall --removemake --rebuildall --noeditmenu --nodiffmenu --cleanafter --answerclean a --answerupgrade a $@
 }
 
-[ ! -f /usr/bin/dexios ] && sudo cargo install dexios && sudo ln -s /home/mchu/.cargo/bin/dexios /usr/bin/
-[ ! -f /usr/bin/rage ] && sudo cargo install rage && sudo ln -s /home/mchu/.cargo/bin/rage /usr/bin/
+[ ! -f /usr/bin/dexios ] && cargo install -f dexios && sudo ln -s /home/mchu/.cargo/bin/dexios /usr/bin/
+[ ! -f /usr/bin/rage ] && cargo install -f rage && sudo ln -s /home/mchu/.cargo/bin/rage /usr/bin/
+[ ! -f /usr/bin/as-tree ] && cargo install -f --git https://github.com/jez/as-tree && sudo ln -s /home/mchu/.cargo/bin/as-tree /usr/bin/
+[ ! -f /usr/bin/fd ] && cargo install fd-find
+[ ! -f /usr/bin/teehee ] && ysy --needed aur/teehee
 [ ! -f /usr/bin/code ] && ysy --needed aur/visual-studio-code-bin
 [ ! -f /usr/bin/nordvpn ] && ysy --needed aur/nordvpn-bin
 [ ! -f /usr/bin/teamviewer ] && ysy --needed aur/teamviewer
