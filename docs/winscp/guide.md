@@ -8,9 +8,10 @@
 
 ## Download and Install Winscp
 
-### 1. Start with a browser and go to winscp download page: https://winscp.net/eng/downloads.php
+### 1. Start with a browser and go to the winscp download page: https://winscp.net/eng/downloads.php
 
-    You can obtain WinSCP from the WinSCP download page. You should save the installer to an easily accessible location such as your Microsoft Windows desktop or your My Documents folder.
+    You can obtain WinSCP from the WinSCP download page. 
+    You should save the installer to an easily accessible location such as your Microsoft Windows desktop or your My Documents folder.
 
 ![Download Page](./images/Winscp_Download.png)
 
@@ -56,7 +57,7 @@
 > ### Winscp guide to security and connectivity
 > https://winscp.net/eng/docs/protocols
 
-## Winscp Setup and Connect to GJCC File Server
+## Connect to your regional GJCC File Server
 
 ### 1. Create a new `Site` Connection
 
@@ -66,14 +67,14 @@
 |---|---|
 | File Protocol | WebDAV |
 | Encryption | TLS/SSL Implicit Encryption |
-| Host Name | file.au1.ziongjcc.org |
+| Host Name | zsf-au1.ziongjcc.org |
 | Port Number | 443 |
 | User Name | << Use the user name U Hermon will provide for you >> |
 | Password | << Use the password U Hermon will provide for you >> |
 
 ![Home Page](./images/Winscp_Setup.png)
 
-### 2. Save the password with connection.
+### 2. Save the password with your new site connection.
 
     Click the checkbox next to the `Save password` so you won't need to type the password again on future connections.
 
@@ -88,7 +89,7 @@
 
 ## Login and Download GJCC Files
 
-### 1. Login to site
+### 1. Login to site (Your site name may be different)
 
     Click the site that was previously saved
 
