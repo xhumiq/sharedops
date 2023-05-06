@@ -63,20 +63,24 @@
 
     Enter the following information to your Winscp `NewSite` Form:
 
-| Item | Value |
-|---|---|
-| File Protocol | WebDAV |
-| Encryption | TLS/SSL Implicit Encryption |
-| Host Name | zsf-au1.ziongjcc.org |
-| Port Number | 443 |
-| User Name | << Use the user name U Hermon will provide for you >> |
-| Password | << Use the password U Hermon will provide for you >> |
+|   | Item | Value |
+|---|---|---|
+| 1 | File Protocol | WebDAV |
+| 2 | Encryption | TLS/SSL Implicit Encryption |
+| 3 | Host Name | zsf-au1.ziongjcc.org |
+| 4 | Port Number | 443 |
+| 5 | User Name | << Use the user name U Hermon will provide for you >> |
+| 6 | Password | << Use the password U Hermon will provide for you >> |
 
 ![Home Page](./images/Winscp_Setup.png)
 
 ### 2. Save the password with your new site connection.
 
-    Click the checkbox next to the `Save password` so you won't need to type the password again on future connections.
+    Feel free to choose your own name for the site connection.
+
+    Select `Save password` so you won't need to type the password again on future connections.
+
+    Select 'Desktop Shortcut' to create an icon on your desktop to automatically connect to site.
 
 ![Home Page](./images/Winscp_Setup2.png)
 
