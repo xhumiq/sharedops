@@ -24,11 +24,11 @@ sudo pacman -S --needed --noconfirm perl-async-interrupt perl-ev perl-guard perl
 sudo pacman -S --needed ebtables
 sudo pacman -S --needed --noconfirm bridge-utils virt-manager vde2 dnsmasq thunderbird
 sudo pacman -S --needed --noconfirm yubico-pam yubikey-personalization sysstat ps_mem gtop nmon bpytop
-sudo pacman -S --needed --noconfirm wireshark-qt python-pdftotext xbindkeys strace
+sudo pacman -S --needed --noconfirm wireshark-qt python-pdftotext xbindkeys strace vultr-cli
 sudo pacman -S --needed --noconfirm noto-fonts ttf-ubuntu-font-family lxappearance signal-desktop borg
 sudo pacman -S --needed --noconfirm adobe-source-han-sans-cn-fonts adobe-source-han-sans-tw-fonts restic
 sudo pacman -S --needed --noconfirm ttf-firacode-nerd ttf-iosevka-nerd ttf-dejavu ttf-freefont gparted
-sudo pacman -S --needed --noconfirm pcsc-tools dog miniserve procs ouch bottom dua-cli mdcat helix
+sudo pacman -S --needed --noconfirm pcsc-tools dog miniserve procs ouch bottom dua-cli mdcat helix cheese
 
 sudo usermod -aG wheel,audio,video,storage,docker $USER
 
