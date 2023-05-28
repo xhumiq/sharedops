@@ -2,9 +2,6 @@
 
 ## How to change Wireguard transport to OpenVPN
 
-> ### For more information on SurfSharks network protocols - see here.
-> https://support.surfshark.com/hc/en-us/articles/360010324739-What-protocols-can-I-use-with-Surfshark-
-
 1. Start Surf Shark Application from the Windows Start Menu.
 2. Click on the settings icon to bring up the settings page.
 
@@ -15,6 +12,9 @@
 ![Settings](./images/vpn_settings.png)
 
 3. You will see the home page links - choose the Islander Cell for shared videos.
+
+> ### For more information on SurfSharks network protocols - see here.
+> https://support.surfshark.com/hc/en-us/articles/360010324739-What-protocols-can-I-use-with-Surfshark-
 
 ![VPN Settings](./images/vpn_settings_form.png)
 
