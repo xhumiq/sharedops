@@ -1,7 +1,7 @@
 # Podcasts for the Android phones -- Antenna Pod
 
 > ### RSS Feeds
-> [RSS Feed](rss://file-us.ziongjcc.org/rss/chinese.rss)
+> rss://file-us.ziongjcc.org/rss/chinese.rss
 
 > ### Https RSS Feeds
 > [Https RSS Feed](https://file-us.ziongjcc.org/rss/chinese.rss)
