@@ -1,5 +1,11 @@
 # Podcasts for the Android phones -- Antenna Pod
 
+> ### RSS Feeds
+> ![RSS Feed](rss://file-us.ziongjcc.org/rss/chinese.rss)
+
+> ### Https RSS Feeds
+> ![RSS Feed](https://file-us.ziongjcc.org/rss/chinese.rss)
+
 1. [Copy Podcast URL](#1-copy-podcast-url)
     * A. [Press and ___Hold___ the url link from Skype](#a-press-and-hold-the-url-link-from-skype)
     * B. [Copy podcast url from Skype](#b-copy-podcast-url-from-skype)
