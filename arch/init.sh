@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-set -e
+set -exuo pipefail
 
 sudo pacman -Syuuu
 
@@ -23,20 +23,17 @@ sudo pacman -S --needed --noconfirm nmap p7zip dust exa tmux tmuxp qemu-full rem
 sudo pacman -S --needed --noconfirm perl-async-interrupt perl-ev perl-guard perl-json perl-json-xs perl-net-ssleay
 sudo pacman -S --needed ebtables
 sudo pacman -S --needed --noconfirm bridge-utils virt-manager vde2 dnsmasq thunderbird
-sudo pacman -S --needed --noconfirm yubico-pam yubikey-personalization sysstat ps_mem gtop nmon bpytop
+sudo pacman -S --needed --noconfirm yubico-pam yubikey-personalization sysstat gtop nmon bpytop
 sudo pacman -S --needed --noconfirm wireshark-qt python-pdftotext xbindkeys strace vultr-cli
 sudo pacman -S --needed --noconfirm noto-fonts ttf-ubuntu-font-family lxappearance signal-desktop borg
 sudo pacman -S --needed --noconfirm adobe-source-han-sans-cn-fonts adobe-source-han-sans-tw-fonts restic
 sudo pacman -S --needed --noconfirm ttf-firacode-nerd ttf-iosevka-nerd ttf-dejavu ttf-freefont gparted
 sudo pacman -S --needed --noconfirm pcsc-tools dog miniserve procs ouch bottom dua-cli mdcat helix cheese
 
-sudo usermod -aG wheel,audio,video,storage,docker $USER
+sudo usermod -aG wheel,audio,video,storage $USER
 
 sudo systemctl enable libvirtd.service
 #sudo systemctl start libvirtd.service
-
-sudo systemctl enable docker.service
-#sudo systemctl start docker.service
 
 #sudo pacman -S nvidia-utils nvidia-settings xorg-server xorg-apps xorg-xinit i3gaps numlockx -noconfirm -needed
 
@@ -59,7 +56,7 @@ ysy() {
 [ ! -f /usr/bin/rage ] && cargo install -f rage && sudo ln -s /home/mchu/.cargo/bin/rage /usr/bin/
 [ ! -f /usr/bin/as-tree ] && cargo install -f --git https://github.com/jez/as-tree && sudo ln -s /home/mchu/.cargo/bin/as-tree /usr/bin/
 [ ! -f /usr/bin/fd ] && cargo install fd-find
-[ ! -f /usr/bin/teehee ] && ysy --needed aur/teehee
+#[ ! -f /usr/bin/teehee ] && ysy --needed aur/teehee
 [ ! -f /usr/bin/code ] && ysy --needed aur/visual-studio-code-bin
 [ ! -f /usr/bin/nordvpn ] && ysy --needed aur/nordvpn-bin
 [ ! -f /usr/bin/teamviewer ] && ysy --needed aur/teamviewer
@@ -70,7 +67,7 @@ ysy() {
 [ ! -f /usr/bin/joplin-desktop ] && ysy --needed aur/raysession-git
 [ ! -f /usr/bin/mpv ] && ysy --needed aur/mpv-full
 [ ! -f /usr/bin/ffmpeg ] && ysy --needed aur/ffmpeg-full
-[ ! -d /usr/share/icons/capitaine-cursors ] && ysy --needed community/capitaine-cursors
+#[ ! -d /usr/share/icons/capitaine-cursors ] && ysy --needed community/capitaine-cursors
 [ ! -d /usr/share/themes/Mint-X ] && ysy --needed aur/mint-themes
 [ ! -d /usr/share/icons/breeze ] && ysy --needed --noconfirm aur/plasma5-themes-breath
 [ ! -d /usr/bin/bfg ] && ysy --needed --noconfirm aur/bfg

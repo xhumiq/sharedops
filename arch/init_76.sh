@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
-set -e
+set -exuo pipefail
 
 sudo pacman -Syuuu
 
-sudo pacman -S --needed --noconfirm community/pop-icon-theme community/pop-gtk-theme
+sudo pacman -S --needed --noconfirm pop-icon-theme pop-gtk-theme
 
 ysy() {
   yay -S --overwrite --redownloadall --removemake --rebuildall --noeditmenu --nodiffmenu --cleanafter --answerclean a --answerupgrade a $@

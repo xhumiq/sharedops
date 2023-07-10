@@ -39,10 +39,6 @@ function prompt_char() {
   echo "%{$fg[cyan]%}.%{$reset_color%}"
 }
 
-function prompt_docker_machine_name(){
-  [ ! -z "$DOCKER_MACHINE_NAME" ] && echo "%{$fg[red]%}[$DOCKER_MACHINE_NAME]%{$reset_color%}"
-}
-
 pathadd() {
   newelement=${1%/}
   if [ -d "$1" ] && ! echo $PATH | grep -E -q "(^|:)$newelement($|:)" ; then
@@ -108,13 +104,6 @@ alias remove_wrap='tput r	mam'
 alias mux='tmuxp'
 alias mux-='tmux kill-server'
 alias kmux="tmux kill-session -t"
-alias dps="docker ps --all"
-alias dexec="docker exec -it"
-alias dlogs="docker logs"
-alias dc="docker-compose"
-alias dm!="eval $(docker-machine env -u)"
-alias dm="docker-machine"
-dm_use(){eval $(docker-machine env $1)}
 
 #eval "$(_TMUXP_COMPLETE=source tmuxp)"
 
@@ -178,17 +167,6 @@ alias ksvcs='kubectl get service "-o=custom-columns=NAME:.metadata.name,HOST:.st
 alias kexec="kc exec"
 alias kcfg="kubectl config view"
 alias max_pods="kubectl get nodes -o json | jq '.items[].status.capacity.pods'"
-
-alias docker_clean_images='docker rmi $(docker images -a --filter=dangling=true -q)'
-alias docker_clean_ps='docker rm $(docker ps --filter=status=exited --filter=status=created -q)'
-
-func docker_clear_cache(){
-  docker kill $(docker ps -q)
-  docker rm $(docker ps --filter=status=exited --filter=status=created -q)
-  docker rmi $(docker images -a -q)
-  docker image prune -a
-  docker system prune
-}
 
 func qssh(){
 	fcfg=~/.ssh/config
@@ -306,13 +284,6 @@ viewcert () {
 	openssl x509 -in $1 -text -noout
 }
 
-dexecsh () {
-	docker exec -it $1 /bin/sh
-}
-
-dm+(){
-  eval $(docker-machine env $1)
-}
 
 cdd(){
 	eval tpath=\$1_PATH
@@ -449,51 +420,11 @@ create_ssh_keygen(){
 	ssh-keygen -q -t rsa -N '' -f $1 <<<y 2>&1 >/dev/null
 }
 
-dk_clean(){
-	docker rm $(docker ps -qa --no-trunc --filter "status=created")
-	# docker rm $(docker ps -qa --no-trunc --filter "status=paused")
-	# docker rm $(docker ps -qa --no-trunc --filter "status=exited")
-	# docker rm $(docker ps -qa --no-trunc --filter "status=dead")
-	docker rm $(docker ps -qa --no-trunc --filter "status=exited")
-	docker rmi $(docker images --filter "dangling=true" -q --no-trunc)
-	docker volume rm $(docker volume ls -qf dangling=true)
-}
-
-clear_docker(){
-  docker rm $(docker ps -a -q)
-  docker rmi $(docker images -q)
-  docker volume rm $(docker volume ls -f dangling=true -q)
-}
-
 ss_cert(){
 	sudo openssl req -x509 -nodes -days 365 -newkey rsa:2048 \
 		-keyout nginx-selfsigned.key \
 		-out nginx-selfsigned.crt && \
 	sudo openssl dhparam -out dhparam.pem 2048
-}
-
-dc+(){
-  dfile=${1:-docker-compose.yml}
-  shift
-  docker-compose -p $DOCKER_COMPOSE_PROJ -f $dfile build  || { echo "docker compose build failed";  return 1; }
-  docker-compose -p $DOCKER_COMPOSE_PROJ -f $dfile pull   || { echo "docker compose pull failed";   return 1; }
-  docker-compose -p $DOCKER_COMPOSE_PROJ -f $dfile down   || { echo "docker compose down  failed";  return 1; }
-  docker-compose -p $DOCKER_COMPOSE_PROJ -f $dfile up $@  || { echo "docker compose up    failed";  return 1; }
-}
-
-dc~(){
-  dfile=${1:-docker-compose.yml}
-	shift
-  docker-compose -p $DOCKER_COMPOSE_PROJ -f $dfile build  || { echo "docker compose build failed";  return 1; }
-  docker-compose -p $DOCKER_COMPOSE_PROJ -f $dfile pull   || { echo "docker compose pull failed";   return 1; }
-  docker-compose -p $DOCKER_COMPOSE_PROJ -f $dfile down   || { echo "docker compose down  failed";  return 1; }
-  docker-compose -p $DOCKER_COMPOSE_PROJ -f $dfile up -d $@  || { echo "docker compose up    failed";  return 1; }
-}
-
-dc-(){
-  dfile=${1:-docker-compose.yml}
-  shift
-  docker-compose -p $DOCKER_COMPOSE_PROJ -f $dfile down $@  || { echo "docker compose down  failed";  return 1; }
 }
 
 [ -s "${HOME}/.local/.env/configs/.loc_rc" ] && source "$HOME/.local/.env/configs/.loc_rc"
