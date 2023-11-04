@@ -22,7 +22,7 @@ sudo pacman -S --needed --noconfirm dmenu perl-json-xs perl-anyevent-i3 gtk-engi
 sudo pacman -S --needed --noconfirm nmap p7zip dust exa tmux tmuxp qemu-full remmina freerdp kdiskmark
 sudo pacman -S --needed --noconfirm perl-async-interrupt perl-ev perl-guard perl-json perl-json-xs perl-net-ssleay
 sudo pacman -S --needed ebtables
-sudo pacman -S --needed --noconfirm bridge-utils virt-manager vde2 dnsmasq thunderbird
+sudo pacman -S --needed --noconfirm bridge-utils virt-manager vde2 dnsmasq thunderbird mtr unrar
 sudo pacman -S --needed --noconfirm yubico-pam yubikey-personalization sysstat gtop nmon bpytop
 sudo pacman -S --needed --noconfirm wireshark-qt python-pdftotext xbindkeys strace vultr-cli
 sudo pacman -S --needed --noconfirm noto-fonts ttf-ubuntu-font-family lxappearance signal-desktop borg
@@ -67,6 +67,12 @@ ysy() {
 [ ! -f /usr/bin/joplin-desktop ] && ysy --needed aur/raysession-git
 [ ! -f /usr/bin/mpv ] && ysy --needed aur/mpv-full
 [ ! -f /usr/bin/ffmpeg ] && ysy --needed aur/ffmpeg-full
+[ ! f /usr/bin/s5cmd ] && ysy --needed --noconfirm aur/s5cmd-bin
+[ ! f /usr/bin/element-desktop ] && ysy --needed --noconfirm extra/element-desktop
+[ ! f /usr/bin/lazygit ] && ysy --needed --noconfirm extra/lazygit
+[ ! f /usr/bin/byobu ] && ysy --needed --noconfirm extra/byobu
+[ ! f /usr/bin/foxitreader ] && ysy --needed --noconfirm aur/foxitreader
+
 #[ ! -d /usr/share/icons/capitaine-cursors ] && ysy --needed community/capitaine-cursors
 [ ! -d /usr/share/themes/Mint-X ] && ysy --needed aur/mint-themes
 [ ! -d /usr/share/icons/breeze ] && ysy --needed --noconfirm aur/plasma5-themes-breath
