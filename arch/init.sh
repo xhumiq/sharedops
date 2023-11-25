@@ -95,7 +95,7 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && . "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-[ -s "$NVM_DIR/nvm.sh" ] && nvm install 21.2.0 && npm install -g npm@latest
+[ -s "$NVM_DIR/nvm.sh" ] && nvm install 21.2.0 && npm install -g npm@latest && curl -fsSL https://get.pnpm.io/install.sh | sh -
 
 if [ ! -f "/home/mchu/.gvm" ]; then
     # Script fails with ZSH - manually add source entry to .zshrc
