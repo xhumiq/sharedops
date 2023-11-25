@@ -6,7 +6,7 @@
 > ### GJCC File Server
 > [GJCC File Server](https://file.ziongjcc.org)
 
-## 1. Install Antenna Pod
+## 1. Install Podcast Addict
 
 * ### A. Using your browser goto the File Server and Login
 
