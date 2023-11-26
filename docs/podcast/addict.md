@@ -12,7 +12,7 @@
 
 > ## https://file.ziongjcc.org
 
-![Go to File Server](images/fileserver/FileServer-Login-01.png)
+![Go to File Server](images/fileserver/FileServer-Login-02.png)
 
 * ### B. Click the menu button
 
