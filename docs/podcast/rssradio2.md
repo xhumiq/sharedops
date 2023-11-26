@@ -12,11 +12,11 @@
 
 ![Go to File Server](images/fileserver/FileServer-IPhone-Menu-Button.png)
 
-* ### C. Select the Podcast Addict Link
+* ### C. Select the RSS Radio Link
 
 ![Go to File Server](images/fileserver/FileServer-IPhone-Menu-RSSRadio.png)
 
-* ### D. Install Podcast Addict
+* ### D. Install RSS Radio
 
 ![Go to File Server](images/rssradio2/RSSRadio-AppStore-Install.png)
 ![Go to File Server](images/rssradio2/RSSRadio-AppStore-Open.png)
