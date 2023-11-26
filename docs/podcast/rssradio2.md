@@ -23,84 +23,79 @@
     * C. [If you see bufferring - wait for it to complete](#c-if-you-see-bufferring---wait-for-it-to-complete)
     * D. [View Player and Exit Player](#d-view-player-and-exit-player)
 
-## 1. Login to File Server
+## 1. Install RSS Radio
 
-* ### A. Using Browser on your IPhone - go to File.Ziongjcc.org
+* ### A. Using your browser goto the File Server and Login
 
-![Go to App Store](images/rssradio/Messages01.png)
-![Go to App Store](images/rssradio/Skype03.png)
+> ## https://file.ziongjcc.org
 
-* ### B. Copy podcast url from Messages or Skype
+![Go to File Server](images/fileserver/FileServer-IPhone-Login-01.png)
 
-![Go to App Store](images/rssradio/Messages02.png)
-![Go to App Store](images/rssradio/Skype01.png)
+* ### B. Click the menu button
 
-## 2. Install RSS Radio from the app store
+![Go to File Server](images/fileserver/FileServer-IPhone-Menu-Button.png)
 
-* ### A. Go to the App Store
-![Go to App Store](images/rssradio/HomeScreen01.png)
-![Go to App Store](images/rssradio/AppStore01.png)
+* ### C. Select the Podcast Addict Link
 
-* ### B. Select RSS Radio in the results drop down
+![Go to File Server](images/fileserver/FileServer-IPhone-Menu-RSSRadio.png)
 
-![Go to App Store](images/rssradio/AppStore02.png)
-![Go to App Store](images/rssradio/AppStore03.png)
+* ### D. Install Podcast Addict
 
-* ### C. Click the Download Button
-![Go to App Store](images/rssradio/AppStore06.png)
-![Go to App Store](images/rssradio/AppStore07.png)
+![Go to File Server](images/rssradio2/RSSRadio-AppStore-Install.png)
+![Go to File Server](images/rssradio2/RSSRadio-AppStore-Open.png)
+![Go to File Server](images/rssradio2/RSSRadio-Welcome.png)
 
-## 3. Subscribe to Podcast
+* ### E. Return to Browser File Server
 
-* ### A. Launch RSS Radio App
-![Go to App Store](images/rssradio/HomeScreen02.png)
-![Go to App Store](images/rssradio/AppStore09.png)
-![Go to App Store](images/rssradio/AppStore10.png)
+![Go to File Server](images/rssradio2/RSSRadio-AppStore-Done.png)
+![Go to File Server](images/fileserver/FileServer-IPhone-Menu.png)
 
-* ### B. Select Default Options
-![Go to App Store](images/rssradio/RssRadio01.png)
-![Go to App Store](images/rssradio/RssRadio02.png)
-![Go to App Store](images/rssradio/RssRadio03.png)
+## 2. Subscribe to a RSS Channel
 
-* ### C. Add Podcast
-![Go to App Store](images/rssradio/RssRadio04.png)
-![Go to App Store](images/rssradio/RssRadio18.png)
-![Go to App Store](images/rssradio/RssRadio05.png)
+* ### A. Using your browser goto the File Server and Login
+You may skip the login if you have already logged into the file server.
 
-* ### D. Enter Podcast Url
-![Go to App Store](images/rssradio/RssRadio19.png)
-![Go to App Store](images/rssradio/RssRadio06.png)
-![Go to App Store](images/rssradio/RssRadio20.png)
+> ## https://file.ziongjcc.org
 
-* ### E. Enter Podcast Credentials
-![Go to App Store](images/rssradio/RssRadio21.png)
+![Go to File Server](images/fileserver/FileServer-IPhone-Login-01.png)
 
-* ### F. Subscribe to Podcast
-![Go to App Store](images/rssradio/RssRadio09.png)
+* ### B. Click the menu button
 
-* ### G. You may not see this prompt, but if you do...
-![Go to App Store](images/rssradio/RssRadio22.png)
+![Go to File Server](images/fileserver/FileServer-IPhone-Menu-Button.png)
 
-* ### H. Podcast Settings
-![Go to App Store](images/rssradio/RssRadio10.png)
-![Go to App Store](images/rssradio/RssRadio11.png)
+* ### C. Select one of the RSS Feed Links
 
-* ### I. Optional - Help and Tips
-![Go to App Store](images/rssradio/RssRadio12.png)
+![Go to File Server](images/fileserver/FileServer-IPhone-Menu-RSS-Feeds.png)
 
-## 4. Download and Watch Videos
+* ### D. Login to subscribe channel
 
-* ### A. Select Podcast
-![Go to App Store](images/rssradio/RssRadio13.png)
-![Go to App Store](images/rssradio/RssRadio14.png)
+![Go to File Server](images/rssradio2/RSSRadio-Login.png)
 
-* ### B. Select Episode for Playback
-![Go to App Store](images/rssradio/RssRadio15.png)
-![Go to App Store](images/rssradio/RssRadio16.png)
+* ### D. Allow network access but deny tracking
 
-* ### C. If you see bufferring - wait for it to complete
-![Go to App Store](images/rssradio/RssRadio23.png)
+![Go to File Server](images/rssradio2/RSSRadio-Access-Network.png)
+![Go to File Server](images/rssradio2/RSSRadio-Access-Tracking-01.png)
+![Go to File Server](images/rssradio2/RSSRadio-Access-Tracking-02.png)
 
-* ### D. View Player and Exit Player
-![Go to App Store](images/rssradio/RssRadio17.png)
+* ### D. Save Password
 
+![Go to File Server](images/rssradio2/RSSRadio-Save-Password.png)
+
+* ### D. Add Subscription
+
+![Go to File Server](images/rssradio2/RSSRadio-Subscription-Add-01.png)
+![Go to File Server](images/rssradio2/RSSRadio-Subscription-Add-02.png)
+
+* ### D. Allow Notifications
+
+![Go to File Server](images/rssradio2/RSSRadio-Notifications.png)
+
+* ### D. RSSRadio Help Documentation
+You may wish to see the documenation. If you do - click "YES"
+
+![Go to File Server](images/rssradio2/RSSRadio-Tips.png)
+
+* ### D. Start Playing Files!
+
+![Go to File Server](images/rssradio2/RSSRadio-Episode-Select.png)
+![Go to File Server](images/rssradio2/RSSRadio-Episode-Play.png)
