@@ -48,31 +48,31 @@ You may skip the login if you have already logged into the file server.
 
 ![Go to File Server](images/rssradio2/RSSRadio-Login.png)
 
-* ### D. Allow network access but deny tracking
+* ### E. Allow network access but deny tracking
 
 ![Go to File Server](images/rssradio2/RSSRadio-Access-Network.png)
 ![Go to File Server](images/rssradio2/RSSRadio-Access-Tracking-01.png)
 ![Go to File Server](images/rssradio2/RSSRadio-Access-Tracking-02.png)
 
-* ### D. Save Password
+* ### F. Save Password
 
 ![Go to File Server](images/rssradio2/RSSRadio-Save-Password.png)
 
-* ### D. Add Subscription
+* ### G. Add Subscription
 
 ![Go to File Server](images/rssradio2/RSSRadio-Subscription-Add-01.png)
 ![Go to File Server](images/rssradio2/RSSRadio-Subscription-Add-02.png)
 
-* ### D. Allow Notifications
+* ### H. Allow Notifications
 
 ![Go to File Server](images/rssradio2/RSSRadio-Notifications.png)
 
-* ### D. RSSRadio Help Documentation
+* ### I. RSSRadio Help Documentation
 You may wish to see the documenation. If you do - click "YES"
 
 ![Go to File Server](images/rssradio2/RSSRadio-Tips.png)
 
-* ### D. Start Playing Files!
+* ### J. Start Playing Files!
 
 ![Go to File Server](images/rssradio2/RSSRadio-Episode-Select.png)
 ![Go to File Server](images/rssradio2/RSSRadio-Episode-Play.png)
