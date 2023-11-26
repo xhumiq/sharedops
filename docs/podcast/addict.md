@@ -50,5 +50,3 @@
 ![Go to File Server](images/podcastaddict/Addict-Subscribe-01.png)
 ![Go to File Server](images/podcastaddict/Addict-Subscribe-02.png)
 ![Go to File Server](images/podcastaddict/Addict-Subscription.png)
-
-
