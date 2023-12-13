@@ -13,7 +13,7 @@
     You can obtain WinSCP from the WinSCP download page. 
     You should save the installer to an easily accessible location such as your Microsoft Windows desktop or your My Documents folder.
 
-![Download Page](./images/Winscp_Download.png)
+![Download Page](./images/winscp/Winscp_Download.png)
 
 ### 2. Double click on the downloaded Installation File
 
@@ -21,34 +21,34 @@
     2. Open the installation program by double-clicking on its icon.
     3. The WinSCP installer starts. Follow its instructions.
 
-![Display Options](./images/Winscp_Install_0.png)
+![Display Options](./images/winscp/Winscp_Install_0.png)
 
 ### 3. Allow the Install App to make changes to your device.
 
-![Home Page](./images/Winscp_Install_Admin.png)
+![Home Page](./images/winscp/Winscp_Install_Admin.png)
 
 
 ### 4. Accept the licensing agreement.
 
-![Display Options](./images/Winscp_Install_1.png)
+![Display Options](./images/winscp/Winscp_Install_1.png)
 
 ### 5. You may keep the Full Upgrade options and move to the `Next` step.
 
-![Display Options](./images/Winscp_Install_2.png)
+![Display Options](./images/winscp/Winscp_Install_2.png)
 
 ### 6. Install the Winscp Application
 
-![Home Page](./images/Winscp_Install_3.png)
+![Home Page](./images/winscp/Winscp_Install_3.png)
 
 ### 7. Wait for the installation to complete
 
-![Home Page](./images/Winscp_Install_4.png)
+![Home Page](./images/winscp/Winscp_Install_4.png)
 
 ### 8. Complete the download.
 
     You may skip the `Getting Started Page` by unchecking the box.
 
-![Home Page](./images/Winscp_Install_5.png)
+![Home Page](./images/winscp/Winscp_Install_5.png)
 
 
 > ### Official Guide to Winscp Site Settings
@@ -72,7 +72,7 @@
 | 5 | User Name | << Use the user name U Hermon will provide for you >> |
 | 6 | Password | << Use the password U Hermon will provide for you >> |
 
-![Home Page](./images/Winscp_Setup.png)
+![Home Page](./images/winscp/Winscp_Setup.png)
 
 ### 2. Save the password with your new site connection.
 
@@ -82,7 +82,7 @@
 
     Select 'Desktop Shortcut' to create an icon on your desktop to automatically connect to site.
 
-![Home Page](./images/Winscp_Setup2.png)
+![Home Page](./images/winscp/Winscp_Setup2.png)
 
 > ### Official Guide to Winscp Explorer Interface
 > https://winscp.net/eng/docs/ui_explorer
@@ -97,24 +97,24 @@
 
     Click the site that was previously saved
 
-![Home Page](./images/Winscp_Login.png)
+![Home Page](./images/winscp/Winscp_Login.png)
 
 
 ### 2. Select the compressed folder
 
     The compressed folder contains video files that are rendered to be as small as possible for fast downloads.
 
-![Home Page](./images/Winscp_Download_1.png)
+![Home Page](./images/winscp/Winscp_Download_1.png)
 
 ### 2. Select the language you want
 
     Regular video files contains both the chinese and english languages.
     Compressed files only contain the preferred language selected.
 
-![Home Page](./images/Winscp_Download_2.png)
+![Home Page](./images/winscp/Winscp_Download_2.png)
 
 ### 3. Select the files you want to download and drag them to your explorer window.
 
     Use your mouse to drag and drop selected files.
 
-![Home Page](./images/Winscp_Download_4.png)
+![Home Page](./images/winscp/Winscp_Download_4.png)
