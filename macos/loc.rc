@@ -1,0 +1,93 @@
+#!/usr/bin/env bash
+
+#set -o errexit; set -o pipefail; set -o nounset;
+
+export RC_SCRIPTPATH="$(
+	cd "$(dirname "$0")"
+	pwd -P
+)"
+export PROJ_BASE_PATH="plive"
+export CURRENT_PROJ="starg"
+
+alias loc~="source $RC_SCRIPTPATH/.loc_rc"
+alias loc!="$EDITOR $RC_SCRIPTPATH/.loc_rc"
+alias qloc="nvim $RC_SCRIPTPATH/.loc_rc"
+
+goland() {
+	proj_path=$1
+	shift
+	cd ${proj_path}
+	[ ! -z "./init_proj.sh" ] && source ./init_proj.sh -a
+	gtk-launch ${goland_desk} ${proj_path} >/dev/null 2>&1
+}
+
+envd() {
+	export CURRENT_PROJ=$1
+	eval tpath=ENV_\$1_ROOT
+	tpath="$(echo "$tpath" | tr /a-z/ /A-Z/)"
+	eval tpath=\$$tpath
+	tpath=${tpath:-/$1}
+	if [ -z $tpath ]; then
+		return
+	fi
+	if [[ ! -d $tpath ]]; then
+		sudo mkdir -p $tpath
+		sudo chown $USER:$USER $tpath
+	fi
+	cd $tpath
+	if [ "$USER" = "root" ]; then
+		if [ -e $tpath/.project_rc_root ]; then
+			source $tpath/.project_rc_root
+		fi
+	else
+		if [ -e $tpath/.project_rc ]; then
+			source $tpath/.project_rc
+		fi
+	fi
+}
+
+penvd() {
+	proj=$1
+	export CURR_SUB_PROJ=${proj}
+	shift
+	eval tpath=\${proj}_PROJ
+	tpath="$(echo "$tpath" | tr /a-z/ /A-Z/)"
+	eval tpath=\$$tpath
+	tpath=${tpath:-/${CURRENT_PROJ}/${path}}
+	export KUBE_PROFILE=${proj}
+	export KUBECONFIG=$kubeProjConfig[${KUBE_PROFILE}]
+	if [ -d $tpath ]; then
+		if [ -e $tpath/.workspace_rc ]; then
+			source $tpath/.workspace_rc
+		fi
+		cd $tpath
+	fi
+}
+
+genvd() {
+	proj=$1
+	eval gpath=\${proj}_GIT
+	gpath="$(echo "$gpath" | tr /a-z/ /A-Z/)"
+	eval gpath=\$$gpath
+	if [ -e $gpath/.workspace_rc ]; then
+		source $gpath/.workspace_rc
+	fi
+	gpath=${gpath:-/ntc/${proj}}
+	subproj=${2:-PROJ}
+	eval tpath=\${proj}_$subproj
+	tpath="$(echo "$tpath" | tr /a-z/ /A-Z/)"
+	eval t1path=\$$tpath
+	if [[ -z $t1path ]] && [ "$subproj" = "PROJ" ]; then
+		eval tpath=\${proj}_GIT
+		tpath="$(echo "$tpath" | tr /a-z/ /A-Z/)"
+		eval t1path=\$$tpath
+	fi
+	t1path=${t1path:-$gpath/$subproj}
+	if [ -e $t1path/.workspace_rc ]; then
+		source $t1path/.workspace_rc
+	fi
+	cd $t1path
+}
+
+[ -z ${IDE_TERMINAL} ] && [ -z ${BYOBU_RUN_DIR} ]
+

@@ -1,0 +1,46 @@
+#!/usr/bin/env bash 
+
+export AWS_ACCT_ID=
+export AWS_ACCESS_KEY_ID=
+export AWS_SECRET_ACCESS_KEY=
+#
+export GOPRIVATE=bitbucket.org/xhumiq
+export GONOSUMDB=bitbucket.org/xhumiq
+export DEPLOY_PKG_PATH="/go/packages"
+export GO_LIB_MODULES="/go/packages"
+
+export PROJ_SCRIPTPATH="$( cd "$(dirname "$0")" ; pwd -P )"
+
+alias rc~='source $PROJ_SCRIPTPATH/.project_rc'
+alias rc!='code $PROJ_SCRIPTPATH/.project_rc'
+alias qrc='(cd $PROJ_SCRIPTPATH; nvim $PROJ_SCRIPTPATH/.project_rc)'
+
+export GO_VER=1.21
+export NODE_VER=20.6.1
+export JAVA_VER="zulu@1.8"
+gvm use go${GO_VER}
+nvm use ${NODE_VER}
+export GOPATH=/go/cache/v${GO_VER}
+jabba use ${JAVA_VER}
+# export JAVA_VER=$(jabba current)
+alias java=${JAVA_HOME}/jre/bin/java
+alias keytool=${JAVA_HOME}/jre/bin/keytool
+
+mkdir -p ${GOPATH}
+
+pathadd ${GOPATH}/bin after 
+pathadd /home/mchu/.gvm/pkgsets/go${GO_VER}/global/bin after
+pathadd /home/mchu/.gvm/gos/go${GO_VER}/bin after
+pathadd /home/mchu/.gvm/pkgsets/go${GO_VER}/global/overlay/bin after
+pathadd /home/mchu/.gvm/bin after
+#pathadd /home/mchu/.nvm/versions/node/v8.15.0/bin after
+
+PROMPT='
+%{$fg[cyan]%}%~%{$reset_color%} %{$fg[gray]%}%t %{$reset_color%}$(git_prompt_short_sha)$(git_prompt_info) [%{$fg[red]%}${CURRENT_PROJ}%{$reset_color%}_${AWS_PROFILE:t:r}/${APP_ENV}] VPN:$(nordvpn status | grep -oP "Status: \K\w+") 
+%{$fg[red]%}%!%{$reset_color%} $(prompt_char) : '
+
+if [ "${USER}" = "root" ]; then;
+PROMPT='
+%{$fg[red]%}%~%{$reset_color%} %{$fg[gray]%}%t %{$reset_color%}$(git_prompt_short_sha)$(git_prompt_info) [%{$fg[red]%}${CURRENT_PROJ}%{$reset_color%}_${AWS_PROFILE:t:r}/${APP_ENV}] VPN:$(nordvpn status | grep -oP "Status: \K\w+") 
+%{$fg[red]%}%!%{$reset_color%} $(prompt_char) : '
+fi
